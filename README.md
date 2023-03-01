@@ -99,3 +99,142 @@ Now go back to terminal and Install docker on the EC2 instance
    ```
    sudo apt install docker.io
    ```
+## Step 4 : Createa  dockerfile and run it using vim/nano editor by creating a Dockerfile 
+  ```
+  vi Dockerfile
+  ```
+Enter insert mode by pressing "i" and write the file as per the following
+
+```
+FROM python : 3
+RUN pip install django==3.2
+
+
+COPY . .
+
+
+RUN python manage.py migrate
+
+
+CMD ["python","manage.py","runserver","0.0.0.0:8001"]
+
+```
+Press esc and use :wq and enter to save the file and exit vim
+
+Now build the docker file we created -t is the tag 
+```
+sudo docker build . -t todo-app
+ ````
+   
+Now you will  get a container ID. 
+```
+sudo docker ps
+```
+Copy that container ID and run the container with the following command.
+``` 
+sudo docker run -p 8001:8001 e7c6d49a6f8d
+
+```
+
+Now go to your browser and copy your public IP and use it to check if the app is running 
+ Enter your public IP:8001.
+ Example : 3.98.154.166:8001
+ 
+ 
+## Step 5 : Install and setup jenkins on your EC2 instance
+Update your system in EC2 Terminal with the following command : 
+```
+   sudo apt update
+   ```
+Install java
+```
+   sudo apt install openjdk-11-jre
+   ```
+Install jenkins : Copy these commands
+                  paste them 
+                  run them
+                  one by one 
+                  in your terminal
+```
+   curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee \   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+   echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \   https://pkg.jenkins.io/debian binary/ | sudo tee \   /etc/apt/sources.list.d/jenkins.list > /dev/null
+ ```
+ ```
+   sudo apt-get update
+   sudo apt-get install jenkins
+   ```
+Start Jenkins with these commands
+```
+   sudo systemctl enable jenkins
+   sudo systemctl start jenkins
+   sudo systemctl status jenkins
+   ```
+Add port 8080 to your inbound rules in secuirity groups to allow traffic on it like we did for port 8001.
+
+Now open Jenkins in browser by using public IP and port number
+
+
+
+Get the password from given location 
+```
+   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+ ```
+
+
+Click install suggested plugin and go ahead ith the installation
+
+Create and setup your admin user and your are done.
+
+You must be on the Jenkins homepage now
+
+Open your terminal and add jenkins to sudoers so that when we build our job in jenkins it can have sudo access
+   ```
+   sudo visudo
+   ```
+use above command to open the file and then add jenkins like this
+
+## Step 6 : Create a GitHub repo for this project and push code from local to created repository
+
+Create a new GitHub repository
+
+Copy the repository url, now go back to instance terminal and change the remote repository to your new repository
+```
+   git remote set-url origin https://github.com/amitgitz/jenkins-Deployment-projects.git
+   ```
+Add ll files to staged
+```
+   git add .
+   ```
+
+Commit all the files
+```
+   git commit -m "added server code "
+   ```
+Push the code to repository
+```
+   git push origin develop
+   ```
+## Step 7 : Integrate jenkins with GitHub
+Open your instance's jenkins and go to manage jenkins > configure sytsem > find github servers here and add your github credentials and save it.
+
+## Step 8 : Deploy the app using Jenkins 
+
+Create a new job as a freestyle project named todo-app
+
+Then in source code management choose git. 
+And paste your repositpory url here.
+
+And in branches to build, write develop as we have pushed our code to the develop branch.
+
+Now in build step. Add build step as eecute shell and write the following commands.
+```
+   sudo docker build . -t todo-app
+   sudo docker run -p 8001:8001 -d todo-app
+```
+
+Save it and click on build now to run the job.
+
+# Congratulations! Your web app is up and running.We hope you find it useful!
+
+
+
