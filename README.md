@@ -96,5 +96,6 @@ Add your instance's public IP to allowed host in setting.py file
 Find allowed host and enter your public IP or just enter '*' so that all Ip's are allowed
 
 Now go back to terminal and Install docker on the EC2 instance 
-   ```sudo apt install docker.io
+   ```
+   sudo apt install docker.io
    ```
