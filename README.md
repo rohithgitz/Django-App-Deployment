@@ -10,5 +10,6 @@ Creating an efficient DevOps workflow for Django app development on EC2 with Doc
 7) Jenkinsfile
 8) Continuous Integration (CI)
 9) Continuous Deployment (CD)
-##Deploying Django apps to EC2 with Docker and Jenkins : A Step-by-Step Guide
-##Step 1 : Managing local development environment 
+
+## Deploying Django apps to EC2 with Docker and Jenkins : A Step-by-Step Guide
+## Step 1 : Managing local development environment 
