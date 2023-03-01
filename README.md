@@ -236,7 +236,13 @@ Now in build step. Add build step as eecute shell and write the following comman
 
 Save it and click on build now to run the job.
 
-# Thank you for taking the time to explore our project. I hope you find it useful and informative.
+## Step 9 : Build is succesfull
+   Now we need to check the weburl at 8000 port
+   
+  
+In conclusion, we have successfully created an efficient DevOps workflow for Django app development on EC2 with Docker and Jenkins. We started with testing our Django app locally and then proceeded to deploy it on an EC2 instance. We also created a Dockerfile and ran it on the instance, and finally, we installed and set up Jenkins for continuous integration and continuous deployment. This step-by-step guide should be helpful to deploy Django apps on EC2 instances with ease.  
+
+# Thank you for reading. I hope you find it useful and informative.
 
 
 
