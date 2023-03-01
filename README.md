@@ -54,7 +54,7 @@ python manage.py createsuperuser
 ```
    python manage.py runserver
 ```
-12) Now we can access the webapp on  http://127.0.0.1:8001/todos 
+12) Now we can access the webapp on  http://127.0.0.1:8000/todos 
 
 ## Step 2 : Creating requirement file
 We will create a requirement.txt file to freeze the dependencies requried to run the application using the following command : 
