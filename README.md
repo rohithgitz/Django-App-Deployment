@@ -54,7 +54,7 @@ python manage.py createsuperuser
 ```
    python manage.py runserver
 ```
-12) Now we can access the webapp on  http://127.0.0.1:8000/todos 
+12) Now we can access the webapp on  http://127.0.0.1:8001/todos 
 
 ## Step 2 : Creating requirement file
 We will create a requirement.txt file to freeze the dependencies requried to run the application using the following command : 
@@ -160,11 +160,12 @@ Install jenkins : Copy these commands
    curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee \   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
    echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \   https://pkg.jenkins.io/debian binary/ | sudo tee \   /etc/apt/sources.list.d/jenkins.list > /dev/null
  ```
+Update OS and install Jenkins : 
  ```
    sudo apt-get update
    sudo apt-get install jenkins
    ```
-Start Jenkins with these commands
+Start Jenkins with these commands :
 ```
    sudo systemctl enable jenkins
    sudo systemctl start jenkins
