@@ -80,6 +80,7 @@ We will create a new directory named projects using the following command :
 mkdir projects
 ```
 "I would like to extend a sincere thank you to shreys7, who contributed his source code to this project. Your efforts have helped to make this project a success, and we are grateful for your contributions."
+
 Clone the django todo app repo in the project directory
 ```
 git clone https://github.com/shreys7/django-todo.git
