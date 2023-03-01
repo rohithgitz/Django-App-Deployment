@@ -236,7 +236,7 @@ Now in build step. Add build step as eecute shell and write the following comman
 
 Save it and click on build now to run the job.
 
-# Congratulations! Your web app is up and running.We hope you find it useful!
+# Thank you for taking the time to explore our project. I hope you find it useful and informative.
 
 
 
