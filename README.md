@@ -242,7 +242,7 @@ Save it and click on build now to run the job.
 
 # Bravo! Your Web App is officially up and running.  
   
-In conclusion, we have successfully created an efficient DevOps workflow for Django app development on EC2 with Docker and Jenkins. We started with testing our Django app locally and then proceeded to deploy it on an EC2 instance. We also created a Dockerfile and ran it on the instance, and finally, we installed and set up Jenkins for continuous integration and continuous deployment. This step-by-step guide should be very helpful to deploy Django apps on EC2 instances with ease.  
+In conclusion, we have successfully created an efficient DevOps workflow for Django app development on EC2 with Docker and Jenkins. I started with testing our Django app locally and then proceeded to deploy it on an EC2 instance. I have also created a Dockerfile and ran it on the instance, and finally, we installed and set up Jenkins for continuous integration and continuous deployment. This step-by-step guide should be very helpful to deploy Django apps on EC2 instances with ease.  
 
 # Thank you for reading. I hope you find it useful and informative.
 
