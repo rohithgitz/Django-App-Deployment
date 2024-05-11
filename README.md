@@ -1,3 +1,16 @@
+# Project Summary:
+I've made it easy for developers to build and launch Django web apps smoothly. By using Amazon's EC2, Docker, and Jenkins, I've simplified the whole process from writing code to deploying it online
+
+# Simplified Setup:
+Developed an easy-to-use local environment for Django app development.
+# Containerized Deployment:
+Utilized Docker to package and deploy Django apps seamlessly across different environments.
+# Automated Processes:
+Implemented Jenkins automation to handle tasks such as testing and deployment, saving time and reducing errors.
+# Accessible Documentation:
+Created clear, user-friendly guides to help anyone understand and contribute to the project.
+
+
 # Django-App-Deployment
 Creating an efficient DevOps workflow for Django app development on EC2 with Docker and Jenkins
 ## Technological Resources
